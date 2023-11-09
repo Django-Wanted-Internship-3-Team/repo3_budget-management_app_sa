@@ -23,7 +23,12 @@ THIRD_PARTY_APPS = [
     "drf_yasg",
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    "budget_management.users.apps.UsersConfig",
+    "budget_management.common.apps.CommonConfig",
+    "budget_management.budget.apps.BudgetConfig",
+    "budget_management.expenses.apps.ExpensesConfig",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -117,7 +122,7 @@ MEDIA_URL = "/media/"
 # Default primary key field type
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-AUTH_USER_MODEL = "users.User"
+# AUTH_USER_MODEL = "users.User"
 
 # Swagger settings
 SWAGGER_SETTINGS = {"SECURITY_DEFINITIONS": {"Bearer": {"type": "apiKey", "name": "Authorization", "in": "header"}}}
