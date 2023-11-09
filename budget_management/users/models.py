@@ -10,7 +10,7 @@ class User(AbstractBaseUser, BaseModel):
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
 
-    objects: models.Manager = UserManager()
+    objects: UserManager = UserManager()
 
     USERNAME_FIELD = "username"
 
